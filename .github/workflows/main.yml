@@ -1,0 +1,7 @@
+name: MyTestGitHubAction
+on: [ push ]
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker-compose up --build
