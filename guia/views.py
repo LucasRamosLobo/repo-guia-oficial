@@ -9,3 +9,12 @@ def home(request):
     }  
         
     return render(request, "index.html", context)
+
+def sobre(request):
+
+    context = {
+        "title":"sobre",
+      
+    }  
+        
+    return render(request, "about.html", context)
