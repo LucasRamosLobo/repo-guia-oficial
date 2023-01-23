@@ -17,7 +17,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: |
-            cd repo-guia-oficial
-            docker-compose up --build
+        run: docker-compose up --build
   
