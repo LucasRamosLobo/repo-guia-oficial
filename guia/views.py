@@ -26,4 +26,4 @@ def parceiro(request):
       
     }  
         
-    return render(request, "parceiro.html", context)
+    return render(request, "pricing.html", context)
