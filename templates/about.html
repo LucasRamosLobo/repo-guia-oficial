@@ -384,67 +384,39 @@
 	<!-- END #fh5co-page -->
 	
 	<!-- For demo purposes Only ( You may delete this anytime :-) -->
-	<div id="colour-variations">
-		<a class="option-toggle"><i class="icon-gear"></i></a>
-		<h3>Preset Colors</h3>
-		<ul>
-			<li><a href="javascript: void(0);" data-theme="style"></a></li>
-			<li><a href="javascript: void(0);" data-theme="red"></a></li>
-			<li><a href="javascript: void(0);" data-theme="turquoise"></a></li>
-			<li><a href="javascript: void(0);" data-theme="blue"></a></li>
-			<li><a href="javascript: void(0);" data-theme="orange"></a></li>
-			<li><a href="javascript: void(0);" data-theme="yellow"></a></li>
-			<li><a href="javascript: void(0);" data-theme="pink"></a></li>
-			<li><a href="javascript: void(0);" data-theme="purple"></a></li>
-		</ul>
-		<a href="#" data-layout="boxed">Boxed</a>
-		<a href="#" data-layout="wide">Wide</a>
-	</div>
+
 	<!-- End demo purposes only -->
 
 	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/magnific-popup-options.js' %}"></script>
 
 	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
-	<script src="js/jquery.style.switcher.js"></script>
+	<script src="{% static 'js/jquery.style.switcher.js' %}"></script>
 	<script>
-		$(function(){
-			$('#colour-variations ul').styleSwitcher({
-				defaultThemeId: 'theme-switch',
-				hasPreview: false,
-				cookie: {
-		          	expires: 30,
-		          	isManagingLoad: true
-		      	}
-			});	
-			$('.option-toggle').click(function() {
-				$('#colour-variations').toggleClass('sleep');
-			});
-		});
+
 	</script>
 	<!-- End demo purposes only -->
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="{% static 'js/main.js' %}"></script>
 
 	<!-- 
 	INFO:
 	jQuery Cookie for Demo Purposes Only. 
 	The code below is to toggle the layout to boxed or wide 
 	-->
-	<script src="js/jquery.cookie.js"></script>
+	<script src="{% static 'js/jquery.cookie.js' %}"></script>
 	<script>
 		$(function(){
 
@@ -465,6 +437,8 @@
 			});
 		});
 	</script>
+	
+
 
 	</body>
 </html>
