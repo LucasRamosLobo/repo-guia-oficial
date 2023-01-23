@@ -12,8 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            su - user
-            cd ~/home/user/repo-guia-oficial
+            cd acme.app
             docker-compose up --build
   test:
     runs-on: ubuntu-latest
