@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd acme.app
+            cd .
             docker-compose up --build
   test:
     runs-on: ubuntu-latest
