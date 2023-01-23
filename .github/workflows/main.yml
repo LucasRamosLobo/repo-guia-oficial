@@ -11,7 +11,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-
+          script: |
+            cd ~/home/user/repo-guia-oficial
+            docker-compose up --build
   test:
     runs-on: ubuntu-latest
     needs: deploy
