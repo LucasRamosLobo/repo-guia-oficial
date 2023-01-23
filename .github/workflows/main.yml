@@ -12,8 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd .
-            docker-compose up --build
+            ls
   test:
     runs-on: ubuntu-latest
     needs: deploy
