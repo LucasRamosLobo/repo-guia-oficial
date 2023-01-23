@@ -12,6 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
+            su - user
             cd ~/home/user/repo-guia-oficial
             docker-compose up --build
   test:
