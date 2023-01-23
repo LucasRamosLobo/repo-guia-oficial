@@ -13,7 +13,10 @@ jobs:
           port: 22
           script: |
             cd home/user/repo-guia-oficial
-            docker-compose up --build
+            docker-compose stop
+            docker-compose rm -f
+            docker-compose pull
+            docker-compose up -d
             
   test:
     runs-on: ubuntu-latest
