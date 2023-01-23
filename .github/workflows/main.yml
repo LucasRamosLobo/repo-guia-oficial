@@ -4,7 +4,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Digital Ocean droplet via SSH action
+      - name: Deploy para vps
         uses: appleboy/ssh-action@v0.1.3
         with:
           host: ${{ secrets.HOST }}
@@ -17,11 +17,3 @@ jobs:
             docker-compose rm -f
             docker-compose pull
             docker-compose up -d
-            
-  test:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build the stack
-        run: docker-compose up --build
