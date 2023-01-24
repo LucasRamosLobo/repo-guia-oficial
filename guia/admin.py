@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Topic, Local, Cidade
 
-# Register your models here.
+
+admin.site.register(Local)
+admin.site.register(Topic)
+admin.site.register(Cidade)
