@@ -1,4 +1,5 @@
 git pull
+python manage.py makemigrations guia
 python manage.py migrate --no-input
 python manage.py collectstatic --no-input
 
