@@ -31,7 +31,7 @@ SECRET_KEY = 'c_r-e8v1divj8y+hu@-w=n#$xj#ciuejybd3_(k2h789(mcv8$'
 #DEBUG = True
 DEBUG = True
 
-ALLOWED_HOSTS = ["guiasuldabahia.com.br"]
+ALLOWED_HOSTS = ["guiasuldabahia.com.br", "localhost", "127.0.0.1"]
 
 
 # Application definition
