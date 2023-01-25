@@ -855,33 +855,13 @@ body {
   background: #f9f9f9;
   padding: 3em 0;
 }
-#fh5co-subscribe h3 {
-  float: left;
-  width: 30%;
-  top: 10px;
-  font-size: 26px;
-  margin-bottom: 0;
-  position: relative;
-}
-#fh5co-subscribe h3 label {
-  font-weight: 300;
-}
-@media screen and (max-width: 992px) {
-  #fh5co-subscribe h3 {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
+
 #fh5co-subscribe form {
   width: 60%;
-  float: right;
-  position: relative;
+  justify-content: center;
+  
 }
-@media screen and (max-width: 992px) {
-  #fh5co-subscribe form {
-    width: 100%;
-  }
-}
+
 #fh5co-subscribe form .fh5co-icon {
   position: absolute;
   top: 50%;
