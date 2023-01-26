@@ -19,7 +19,13 @@ def home(request):
     return render(request, "index.html", context)
 
 def sobre(request):
-
+    if request.method=="POST":
+        wpp=request.POST['wpp']
+        email=request.POST['email']
+        email_form=settings.EMAIL_HOST_USER
+        recipient_list=["lucasramoslobo83@gmail.com"]
+        send_mail('Contato guia sul da bahia','email: ' + email + '  wpp: ' + wpp, email_form, recipient_list)
+        return redirect('/guia-sul-da-bahia/')
     context = {
         "title":"sobre",
       
@@ -28,7 +34,13 @@ def sobre(request):
     return render(request, "about.html", context)
 
 def parceiro(request):
-
+    if request.method=="POST":
+        wpp=request.POST['wpp']
+        email=request.POST['email']
+        email_form=settings.EMAIL_HOST_USER
+        recipient_list=["lucasramoslobo83@gmail.com"]
+        send_mail('Contato guia sul da bahia','email: ' + email + '  wpp: ' + wpp, email_form, recipient_list)
+        return redirect('/parceiro-guia-sul-da-bahia/')
     context = {
         "title":"parceiro",
       
