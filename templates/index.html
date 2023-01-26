@@ -137,6 +137,7 @@
 			</div>
 		</section>
 		<!-- #fh5co-header -->
+		
 
 		<section id="fh5co-hero" class="js-fullheight" style="background-image: url(../static/images/hero_bg.jpg);" data-next="yes">
 			<div class="fh5co-overlay"></div>
@@ -174,20 +175,36 @@
 						<p class="fh5co-sub-lead animate-box">Experiências exclusivas no sul da bahia feitas por quem realmente conhece o local! </p>
 					</div>
 				</div>
+				<form action="{% url 'search' %}" method="get" class="animate-box text-center">
+                               
+					<div class="row d-flex justify-content-center">
+						
+				 
+				  
+					
+						
+						  <input type="text" id="form51" class="form-control " name="search" placeholder="Procure locais nos registros" >
+						
+						 <br>
+					   
+					 
+							  <button type="submit" class="btn btn-primary" style="background-color:#EF6100; border-color:#BD4B00 ;"><span class="icon-magnifier search-icon"></span>Procurar<i class="pe-7s-angle-right"></i></button>
+						  </div>
+					  </form>
 				<div class="row">
 					
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/praia_2.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Passeios=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/praia_2.jpg' %}" alt="Image" class="img-responsive">
 							<div class="fh5co-text">
-								<h2>Passeios no sul da bahia</h2>
+								<h2>Passeios no sul da Bahia</h2>
 								<p> A Bahia é conhecida por ter praias incríveis e cenários naturais deslumbrantes.</p>
 							</div>
 						</a>
 					</div>
 
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/hotel.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Hospedagens=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/hotel.jpg' %}" alt="hoteis no sul da bahia" class="img-responsive">
 							<div class="fh5co-text">
 								<h2>Dicas de hospedagem</h2>
@@ -197,7 +214,7 @@
 					</div>
 
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/comida.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Restaurantes=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/comida.jpg' %}" alt="Image" class="img-responsive">
 							<div class="fh5co-text">
 								<h2>Experiências gastronomicas</h2>
@@ -207,7 +224,7 @@
 					</div>
 
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/transfer.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Transfers=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/transfer.jpg' %}" alt="Image" class="img-responsive">
 							<div class="fh5co-text">
 								<h2>Transfers e translados</h2>
@@ -217,7 +234,7 @@
 					</div>
 
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/rafting.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Esportes=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/rafting.jpg' %}" alt="Image" class="img-responsive">
 							<div class="fh5co-text">
 								<h2>Esporte e Saúde</h2>
@@ -227,7 +244,7 @@
 					</div>
 
 					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="{% static 'images/praia.jpg' %}" class="fh5co-project-item image-popup">
+						<a href="search/?Experiências=on&search=" class="fh5co-project-item" >
 							<img src="{% static 'images/praia.jpg' %}" alt="Image" class="img-responsive">
 							<div class="fh5co-text">
 								<h2>Experiências exclusivas</h2>

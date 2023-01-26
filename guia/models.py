@@ -18,16 +18,16 @@ class Topic(models.Model):
         return self.title
 
 class Local(models.Model):
-    NomeDoLocal = models.CharField(max_length=200)
-    slug = AutoSlugField(populate_from="NomeDoLocal")
+    title = models.CharField(max_length=200)
+    slug = AutoSlugField(populate_from="title")
     FotoDoAnuncio = models.CharField(max_length=400)
     SobreLocal = models.TextField()
     RedesSociais = models.TextField()
-    Topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     Cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.NomeDoLocal
+        return self.title
 
     def get_url(self):
         return reverse("detail", kwargs={
