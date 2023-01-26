@@ -1,234 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
-   {% load static %}
-   {% include 'head.html' %}
+{% load static %}
 
-    <style>
-       html,
-       body,
-       header,
-       .jarallax {
-       height: 1000px;
-       min-height: 800px;
-       }
-       .logo {
-            margin-top: -40px;
-            display: inline-block;
-      }
-  .a {
-     color: aliceblue;
-  }
-  .nav-menu {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  background: #272323; }
-  a {
- 
-  color:rgb(255, 255, 255) }
-  h6 {
-  font-size: 21px;
-  font-weight: 400;
-  color:black; }
-  .slider {
-  background: url(../images/slider.jpg) no-repeat;
-  background-size: cover;
-  min-height: 800px; }
-    </style>
-  <body>
-   <div class="a">
- <!--============================= HEADER =============================-->
- <div class="nav-menu">
-      
-   <div class="nav-menu">
-      
-   
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Guia Sul da Bahia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="O melhor do sul da bahia" />
+	<meta name="keywords" content="O MELHOR DO SUL DA BAHIA" />
+	<meta name="author" content="GUIASULDABAHIA" />
 
+  <!-- 
+	//////////////////////////////////////////////////////
 
-               
-           
-         
-         </ul>
-     </div>
- </nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- /main nav -->
-</div>
-</header>
-&nbsp;
-<body>
-   <body >
-      <div class="mask rgba-gradient7">
-         <div class="container h-100 d-flex justify-content-center align-items-center">
-            <!-- Grid row -->
-            <div class="row  pt-5 mt-3">
-               <!-- Grid column -->
-               <div class="col-md-12">
-                  <div class="card">
-                     <div class="card-body">
-                        
-                        <h5>{{query}} Resultados Encontrados.</h5>
-                     </div>
-                  </div>
-               </div>
-               <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-         </div>
-      </div>
-      
-      <div class="jumbotron">
-         
-      
-        
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
-         <div class="container mt-5">
-            <!--Section: Content-->
-            <section class="">
-               
-               <!-- Grid row -->
-               <div class="row">
+	//////////////////////////////////////////////////////
+	 -->
 
-               
-                 
-                     {% for recipe in inter %}
-                  <!-- Grid column -->
-                  <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-                     <!-- Card -->
-                     <div class="card hoverable">
-                        <!-- Card image -->
-                        <img class="card-img-top" src="{{recipe.FotoDoAnuncio}}" alt="Card image cap">
-                        <!-- Card content -->
-                        <div class="card-body">
-                           <!-- Title -->
-                           <a href="{{recipe.get_url}}" class="black-text" style="color:black">{{recipe.title}}</a>
-                           <!-- Text -->
-                           <p class="card-title text-muted font-small mt-3 mb-2">{{recipe.description|safe|slice:":150"}}</p>
-                           <a type="button" class="btn btn-flat text-primary p-0 mx-0" href="{{recipe.get_url}}">Read more<i class="fa fa-angle-right ml-2"></i></a>
-                        </div>
-                     </div>
-                     <!-- Card -->
-                  </div>
-                  {% endfor %}
-                
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{% static 'images/logo.png' %}">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	
+
+	-->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="{% static 'css/style.css' %}">
+	<!-- End demo purposes only -->
+
+	<style>
+	/* For demo purpose only */
+
+	/*
+	GREEN
+	8dc63f
+	RED
+	FA5555
+	TURQUOISE
+	27E1CE
+	BLUE 
+	2772DB
+	ORANGE
+	FF7844
+	YELLOW
+	FCDA05
+	PINK
+	F64662
+	PURPLE
+	7045FF
+
+	*/
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	
+	</style>
+	<!-- End demo purposes only -->
 
 
-                  
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
 
 
-              
-                 
-               </div>
-               <!-- Grid row -->
+	<!-- 
+		INFO:
+		Add 'boxed' class to body element to make the layout as boxed style.
+		Example: 
+		<body class="boxed">	
+	-->
+	<body>
+	
+	<!-- Loader -->
+	<div class="fh5co-loader"></div>
+	
+	<div id="fh5co-page">
+		<section id="fh5co-header">
+			<div class="container">
+				<nav role="navigation">
+					<ul class="pull-left left-menu">
+						<li><a href="{% url 'home' %}">Início</a></li>
+						<li><a href="{% url 'sobre' %}">Sobre o Guia</a></li>
+						<li><a href="{% url 'parceiro' %}">Seja Parceiro</a></li>
+					</ul>
+					<h1 id="fh5co-logo"><img src="{% static 'images/logo.png' %}" style="width:7%"></img></h1>
+					<ul class="pull-right right-menu">
+						<li><a href="#">Entrar</a></li>
+						<li class="fh5co-cta-btn"><a href="#">Registrar</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<!-- #fh5co-header -->
+		
+
+		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(../static/images/hero_bg.jpg);" data-next="yes">
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="fh5co-intro no-js-fullheight">
+					<div class="text-center">
+						<!-- 
+							INFO:
+							Change the class to 'fh5co-right-position' or 'fh5co-center-position' to change the layout position
+							Example:
+							<div class="fh5co-right-position">
+						-->
+						<div class="fh5co-left-position">
+							<h2 class="animate-box">Resultados abaixo</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-learn-more animate-box">
+				<a href="#" class="scroll-btn">
+					<span class="arrow" style="background-color:#EF6100; border-color:#BD4B00 ;"><i class="icon-chevron-down" style="background-color:#EF6100; border-color:#BD4B00 ;"></i></span>
+				</a>
+			</div>
+		</section>
+		<!-- END #fh5co-hero -->
 
 
-               <!--##############################Pagination################################-->
- 
-               <!-- Pagination -->
-               <nav class="my-4 flex-center">
-                  <ul class="list-unstyled pagination pagination-circle pg-blue mb-0">
-                     
-                     <!-- First -->
-                     {% if page == "1" %}
-                     <li class="page-item disabled clearfix d-none d-md-block">
-                        <a class="page-link" href="#">First</a>
-                     </li>
-                     {% else %}
-                     <li class="page-item clearfix d-none d-md-block">
-                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page=1">First</a>
-                     </li>
-                     {% endif %}
-               
-                     <!-- Arrow left -->
-                     {% if results.has_previous %}
-                     <li class="page-item">
-                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.previous_page_number}}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                     </li>
-                     {% else %}
-                     <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                     </li>
-                     {% endif %}
-                  
-                     <!-- Numbers -->
-                     {% for number in results.paginator.page_range %}
-                     <li class="page-item">
-                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{number}}">{{number}}</a>
-                     </li>
-                     {% endfor %}
-                  
-      
-                     <!-- Arrow right -->
-                     {% if results.has_next %}
-                     <li class="page-item">
-                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.next_page_number}}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                        </a>
-                     </li>
-                     {% else %}
-                     <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                        </a>
-                     </li>
-                     {% endif %}
+		<section id="fh5co-projects">
+			<div class="container">
+				
+		
+				<div class="row">
+               {% for recipe in inter %}	
+					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
+						<a href="{{recipe.get_url}}" class="fh5co-project-item" >
+							<img src="{{recipe.FotoDoAnuncio}}" alt="Image" class="img-responsive">
+							<div class="fh5co-text">
+								<h2>{{recipe.title}}</h2>
+							
+							</div>
+						</a>
+					</div>
 
-                     <!-- Last -->
-                     {% if page != results.paginator.num_pages %}
-                     <li class="page-item clearfix d-none d-md-block">
-                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.paginator.num_pages}}">Last</a>
-                     </li>
-                     {% else %}
-                     <li class="page-item clearfix d-none d-md-block disabled">
-                        <a class="page-link" href="#">Last</a>
-                     </li>
-                     {% endif %}
-                  </ul>
-               </nav>
-               <!-- Pagination -->
-               
-               <div class="text-center mt-5">
-                  <a class="btn btn-outline top-btn" href="/">Back Home</a>
-               </div>
-            </section>
-            
-            <!--Section: Content-->
-         </div>
-      </div>
-      <footer class="main-block dark-bg">
-         <div class="container">
-             <div class="row">
-                 <div class="col-md-12">
-                     <div class="copyright">
-                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                         <p>Copyright &copy; 2021 Guia Sul da Bahia - Todos os direitos reservados <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">LRL</a></p>
-                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                         <ul>
-                             <li><a href="https://www.instagram.com/guisuldabahia"><span class="ti-facebook"></span></a></li>
-                       
-                             <li><a href="https://www.facebook.com/guisuldabahia"><span class="ti-instagram"></span></a></li>
-                         </ul>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </footer>
-      <!-- Main Navigation -->
-      {% include 'scriptss.html' %}
-   </body>
+               {% endfor %}
+					
+					
+				</div>
+			</div>
+		</section>
+		<!-- END #fh5co-projects -->
+
+		<!-- END #fh5co-features -->
+
+
+	
+		<!-- END #fh5co-features-2 -->
+		
+		<section id="fh5co-testimonials">
+			<div class="container">
+				<div class="row row-bottom-padded-sm">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<div class="fh5co-label animate-box">Seja parceiro</div>
+						<h2 class="fh5co-lead animate-box">Estamos selecionando nossos primeiros parceiros </h2>
+				
+			
+				<form method="post" class="animate-box text-center" action =''>{% csrf_token %}
+				
+					<input type="email" class="form-control" placeholder="Digite seu E-mail" id="email" name="email" >
+			
+			
+				<br>
+				&nbsp;
+			
+		
+					<input type="tel" class="form-control" placeholder="Digite seu WhatsApp" id="email" name="wpp">
+					<br>
+					<input type="submit" value="Enviar" class="btn btn-primary" style="background-color:#EF6100; border-color:#BD4B00 ;">
+				</form>
+
+			</div>
+		</section>
+		<!-- END #fh5co-testimonials -->
+
+		<!-- END #fh5co-subscribe -->
+
+		<footer id="fh5co-footer">
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Guia</h3>
+							<ul class="fh5co-links">
+								<li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+								<li><a href="{% url 'parceiro' %}">Seja Parceiro</a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Suporte</h3>
+							<ul class="fh5co-links">
+								<li><a href="{% url 'sobre' %}">Entre em contato</a></li>
+							
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Contate-nos</h3>
+							<p>
+								<a href="mailto:info@freehtml5.co">contato@guiasuldabahia.com.br</a> <br>
+				
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Siga-nos</h3>
+							<ul class="fh5co-social">
+			
+					
+								<li><a href="https://www.instagram.com/guiasuldabahia/"><i class="icon-instagram"></i></a></li>
+					
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="fh5co-copyright animate-box">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="fh5co-left"><small>&copy; 2023 <a href="{% url 'home' %}">Guia Sul da Bahia</a>  All Rights Reserved.</small></p>
+							<p class="fh5co-right"><small class="fh5co-right"> <a href="" target="_blank"></a> </small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END #fh5co-footer -->
+	</div>
+		</footer>
+		<!-- END #fh5co-footer -->
+
+	<!-- End demo purposes only -->
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="{% static 'js/jquery.style.switcher.js' %}"></script>
+	<script>
+
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	<!-- 
+	INFO:
+	jQuery Cookie for Demo Purposes Only. 
+	The code below is to toggle the layout to boxed or wide 
+	-->
+	<script src="{% static 'js/jquery.cookie.js' %}"></script>
+	<script>
+		$(function(){
+
+			if ( $.cookie('layoutCookie') != '' ) {
+				$('body').addClass($.cookie('layoutCookie'));
+			}
+
+			$('a[data-layout="boxed"]').click(function(event){
+				event.preventDefault();
+				$.cookie('layoutCookie', 'boxed', { expires: 7, path: '/'});
+				$('body').addClass($.cookie('layoutCookie')); // the value is boxed.
+			});
+
+			$('a[data-layout="wide"]').click(function(event){
+				event.preventDefault();
+				$('body').removeClass($.cookie('layoutCookie')); // the value is boxed.
+				$.removeCookie('layoutCookie', { path: '/' }); // remove the value of our cookie 'layoutCookie'
+			});
+		});
+	</script>
+	
+
+
+	</body>
 </html>
