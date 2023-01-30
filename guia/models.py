@@ -23,6 +23,7 @@ class Local(models.Model):
     FotoDoAnuncio = models.CharField(max_length=400)
     SobreLocal = models.TextField()
     RedesSociais = models.TextField()
+    Telefones = models.TextField()
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     Cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
 
