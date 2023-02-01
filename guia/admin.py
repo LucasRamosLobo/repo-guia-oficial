@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Topic, Local, Cidade
+from .models import Categoria, Local, Cidade, Plano
 
 
 admin.site.register(Local)
-admin.site.register(Topic)
+admin.site.register(Categoria)
 admin.site.register(Cidade)
+admin.site.register(Plano)

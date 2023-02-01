@@ -74,35 +74,35 @@ def search(request):
 
     if "search" in request.GET:
         query = request.GET.get("search")
-        queryset = recipes.filter(Q(title__icontains=query))
-        results = recipes.filter(Q(title__icontains=query))
+        queryset = recipes.filter(Q(Nome__icontains=query))
+        results = recipes.filter(Q(Nome__icontains=query))
         topic = ''
         cidade =''
     
  
     if request.GET.get("Passeios"):
-        results3 = queryset.filter(Q(topic__title__icontains="Passeios"))
+        results3 = queryset.filter(Q(Categoria__Nome__icontains="Passeios"))
         topic = "Passeios"
         b = True  
     if request.GET.get("Restaurantes"):
-        results4 = queryset.filter(Q(topic__title__icontains="Restaurantes"))
+        results4 = queryset.filter(Q(Categoria__Nome__icontains="Restaurantes"))
         topic="Restaurantes"
         b = True 
     if request.GET.get("Transfers"):
-        results5 = queryset.filter(Q(topic__title__icontains="Transfers"))
+        results5 = queryset.filter(Q(Categoria__Nome__icontains="Transfers"))
         topic="Transfers"
         b = True 
     if request.GET.get("Hospedagens"):
-        results6 = queryset.filter(Q(topic__title__icontains="Hospedagens"))
+        results6 = queryset.filter(Q(Categoria__Nome__icontains="Hospedagens"))
         topic="Hospedagens"
         b = True 
     if request.GET.get("Esportes"):
-        results7 = queryset.filter(Q(topic__title__icontains="Esportes"))
+        results7 = queryset.filter(Q(Categoria__Nome__icontains="Esportes"))
         topic="Esportes"
         b = True 
 
     if request.GET.get("Experiências"):
-        results8 = queryset.filter(Q(topic__title__icontains="Experiências"))
+        results8 = queryset.filter(Q(Categoria__Nome__icontains="Experiências"))
         topic="Experiências"
         b = True 
     
