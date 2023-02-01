@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-    {% include 'head.html' %}
-    <!DOCTYPE html>
 {% load static %}
 
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -120,264 +116,185 @@
 	<body>
 	
 	<!-- Loader -->
-
+	<div class="fh5co-loader"></div>
 	
-	<div id="fh5co-page" >
-		<section id="fh5co-header" >
+	<div id="fh5co-page" style="background-color:black">
+		<section id="fh5co-header">
 			<div class="container">
 				<nav role="navigation">
 					<ul class="pull-left left-menu">
-						<li><a style="color:#e6ffe6" href="{% url 'home' %}">Início</a></li>
-						<li><a style="color:#e6ffe6" href="{% url 'sobre' %}">Sobre o Guia</a></li>
-						<li><a style="color:#e6ffe6" href="{% url 'parceiro' %}">Seja Parceiro</a></li>
+						<li><a href="{% url 'home' %}">Início</a></li>
+						<li><a href="{% url 'sobre' %}">Sobre o Guia</a></li>
+						<li><a href="{% url 'parceiro' %}">Seja Parceiro</a></li>
 					</ul>
 					<a href="{% url 'home' %}"><h1 id="fh5co-logo"><img src="{% static 'images/logo.png' %}" style="width:7%"></img></h1></a>
 
 				</nav>
 			</div>
 		</section>
-      <style>
-       
-         .circle{
-         background-color: #e6ffe6;
-         border-radius: 50px;
-         padding: 20px;
-         }
-         .circle:hover{
-         background-color:#99ff99;
-         }
-         .rectangle{
-         background-color: #ffb3b3;
-         padding: 20px;
-         }
-         .rectangle:hover{
-         background-color:#ffe6e6;
-         }
-         html,
-       body,
-       header,
-       .jarallax {
-       height: 1000px;
-       min-height: 800px;
-       }
-       .logo {
-            margin-top: -40px;
-            display: inline-block;
-      }
-  .a {
-     color: aliceblue;
-  }
+		<!-- #fh5co-header -->
+		
 
-  h6 {
-  font-size: 21px;
-  font-weight: 400;
-  color:black; }
-  .slider {
-  background: url(../images/slider.jpg) no-repeat;
-  background-size: cover;
-  min-height: 800px; }
-  
- 
-   
- .navbar {
-    padding: .1rem 0;
-    font-family:"Source Sans Pro", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fffffff5;
-    text-align: left; }
-    a {
-    
-    color:#ef6100; }
-    .nav-menu {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  background: #ffffffe8; }
-    
-  
-      </style>
-  
-        <!-- main nav -->
-       <body>
-         
-        <!--============================= HEADER =============================-->
-       
-                       
-                                          
-                                      
-                                    
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-              <!-- /main nav -->
-      </div>
-    </header>
-   
-  
-<body>
-         
-        
-        
-<section>
-   <div class="" style="max-height:600px;">
-      <img src="{{recipe.FotoDoAnuncio}}" style="width: 100%">
-   </div>
-   
-</section>
-       
-      <!-- Main Navigation -->
-      <!-- Main Layout -->
-      <main>
-         
-         <div class="container-fluid mt-5 mt-md-0 mb-5">
-            <!-- Grid row -->
-            <div class="row" style="margin-top: -100px;">
-               <!-- Grid column -->
-               <div class="col-md-12 px-lg-5">
-                  <!-- Card -->
-                  <div class="card pb-5 mx-md-3">
-                     <h6>{{recipe.topic.title}}</h6>
-                     <section class="reserve-block">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h5>{{recipe.title}}</h5>
-                                
-                                    
-                                   
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="reserve-seat-block">
-                                      
-                                       
-                                        <div class="review-btn">
-                                            <a href="#" class="btn btn-outline-danger">Fazer Comentário</a>
-                                            
-                                        </div>
-                                        <div class="reserve-btn">
-                                            <div class="featured-btn-wrap">
-                                                <a href="#" class="btn btn-danger">Entrar em Contato</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="light-bg booking-details_wrap">
-                     <div class="container">
-                      
+	
+		<!-- END #fh5co-hero -->
 
-                    
-   
-                              <!-- Grid column -->
-                              <div class="col-md-12 col-xl-12">
-                                 <!-- Grid row -->
-                                 <!---------------------------------------------------------------------------------------------------->
-                       
-                                 
-                                 <div class="row">
-                                    <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12">
-                                       
-                                       <div class="jumbotron" style="background-color: #f5f5f0">
-                                          
-                                        <h5>{{recipe.SobreLocal}}</h5>
-                                   </div>
-                                        
-                                       </div>
-                                    </div>
-                                 
-                                 </div>
-                              </div>
-                   
-              
-                                 <!---------------------------------------------------------------------------------------------------->
-                                 <!-- Grid row -->
-                                 <div class="row my-5">
-                                    <!-- Grid column -->
-                                    <div class="col-md-12 text-center">
-                                       <h4 class="text-center font-weight-bold dark-grey-text mt-3 mb-3">
-                                          <strong>Share this post: </strong>
-                                       </h4>
-                                       <button type="button" class="btn btn-fb btn-sm">
-                                       <i class="fab fa-facebook-f left"></i> Facebook</button>
-                                       <!-- Twitter -->
-                                       <button type="button" class="btn btn-tw btn-sm">
-                                       <i class="fab fa-twitter left"></i> Twitter</button>
-                                       <!-- Google + -->
-                                       <button type="button" class="btn btn-gplus btn-sm">
-                                       <i class="fab fa-google-plus-g left"></i> Google +</button>
-                                    </div>
-                                    <!-- Grid column -->
-                                 </div>
-                                 <!-- Grid row -->
-                                 <hr class="mt-5">
-                                 <!-- Section: Leave a reply (Not Logged In User) -->
-                              </div>
-                              <!-- Grid column -->
-                           </div>
-                           <!-- Grid row -->
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Card -->
-               </div>
-               <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-            <div class="text-center mt-5">
-              
-            </div>
-         </div>
-      </main>
-      <!-- Main Layout -->
-      
-      <!-- Footer -->
-      <footer class="main-block dark-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright &copy; 2021 Guia Sul da Bahia - Todos os direitos reservados <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">LRL</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <ul>
-                    
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-      </body>
-      </html>
-      <!-- SCRIPTS -->
-      {% include 'scripts.html' %}
-      
-      <script>
-         new WOW().init();
-         
-         $(function () {
-           var selectedClass = "";
-           $(".filter").click(function () {
-             selectedClass = $(this).attr("data-rel");
-             $("#gallery").fadeTo(100, 0.1);
-             $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
-             setTimeout(function () {
-               $("." + selectedClass).fadeIn().addClass('animation');
-               $("#gallery").fadeTo(300, 1);
-             }, 300);
-           });
-         });
-      </script>
+
+	
+		<!-- END #fh5co-projects -->
+
+		<!-- END #fh5co-features -->
+
+
+		<section id="fh5co-features-2" style="top:100px; position:relative">
+			<div class="container">
+				<div class="col-md-6 col-md-push-6">
+					<figure class="fh5co-feature-image animate-box">
+						<img src="{{recipe.FotoPincipal}}" style="width:90%">
+					</figure>
+				</div>
+				<div class="col-md-6 col-md-pull-6">
+			
+					<div class="fh5co-feature">
+						<div class="fh5co-icon animate-box"></div>
+						<div class="fh5co-text animate-box">
+							<h3>{{recipe.Nome}}</h3>
+							<p>{{recipe.SobreLocal}}</p>
+						</div>
+					</div>
+					
+
+					<div class="fh5co-btn-action animate-box">
+						<a href="#" class="btn btn-primary btn-cta" style="background-color:#EF6100; border-color:#BD4B00">Saiba mais</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- END #fh5co-features-2 -->
+		
+		
+		<!-- END #fh5co-testimonials -->
+
+		<!-- END #fh5co-subscribe -->
+
+		<footer id="fh5co-footer">
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Guia</h3>
+							<ul class="fh5co-links">
+								<li><a href="{% url 'sobre' %}">Sobre Nós</a></li>
+								<li><a href="{% url 'parceiro' %}">Seja Parceiro</a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Suporte</h3>
+							<ul class="fh5co-links">
+								<li><a href="{% url 'sobre' %}">Entre em contato</a></li>
+							
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Contate-nos</h3>
+							<p>
+								<a href="mailto:info@freehtml5.co">contato@guiasuldabahia.com.br</a> <br>
+				
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Siga-nos</h3>
+							<ul class="fh5co-social">
+			
+					
+								<li><a href="https://www.instagram.com/guiasuldabahia/"><i class="icon-instagram"></i></a></li>
+					
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="fh5co-copyright animate-box">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="fh5co-left"><small>&copy; 2023 <a href="{% url 'home' %}">Guia Sul da Bahia</a>  All Rights Reserved.</small></p>
+							<p class="fh5co-right"><small class="fh5co-right"> <a href="" target="_blank"></a> </small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END #fh5co-footer -->
+	</div>
+		</footer>
+		<!-- END #fh5co-footer -->
+
+	<!-- End demo purposes only -->
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="{% static 'js/jquery.style.switcher.js' %}"></script>
+	<script>
+
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	<!-- 
+	INFO:
+	jQuery Cookie for Demo Purposes Only. 
+	The code below is to toggle the layout to boxed or wide 
+	-->
+	<script src="{% static 'js/jquery.cookie.js' %}"></script>
+	<script>
+		$(function(){
+
+			if ( $.cookie('layoutCookie') != '' ) {
+				$('body').addClass($.cookie('layoutCookie'));
+			}
+
+			$('a[data-layout="boxed"]').click(function(event){
+				event.preventDefault();
+				$.cookie('layoutCookie', 'boxed', { expires: 7, path: '/'});
+				$('body').addClass($.cookie('layoutCookie')); // the value is boxed.
+			});
+
+			$('a[data-layout="wide"]').click(function(event){
+				event.preventDefault();
+				$('body').removeClass($.cookie('layoutCookie')); // the value is boxed.
+				$.removeCookie('layoutCookie', { path: '/' }); // remove the value of our cookie 'layoutCookie'
+			});
+		});
+	</script>
+	
+
+
+	</body>
+</html>
