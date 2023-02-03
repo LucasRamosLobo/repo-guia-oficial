@@ -56,7 +56,7 @@ def parceiro(request):
         
     return render(request, "pricing.html", context)
 
-def search(request):
+def search(request, *args, **kwargs):
     recipes = Local.objects.all()
     inter = []
     results1=[]
@@ -78,7 +78,15 @@ def search(request):
         results = recipes.filter(Q(Nome__icontains=query))
         topic = ''
         cidade =''
-    
+
+    if request.GET.get("Itacaré"):
+        results1 = queryset.filter(Q(Cidade__Nome__icontains="Itacaré"))
+        cidade = "Itacaré"
+        b = True
+    if request.GET.get("Ilhéus"):
+        results2 = queryset.filter(Q(Cidade__Nome__icontains="Ilhéus"))
+        cidade="Ilhéus"
+        b = True    
  
     if request.GET.get("Passeios"):
         results3 = queryset.filter(Q(Categoria__Nome__icontains="Passeios"))
