@@ -38,9 +38,13 @@ class Local(models.Model):
     Endereço = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.Nome
+        return {
+            'nome':self.Nome
+        }
 
     def get_url(self):
         return reverse("detail", kwargs={
             "slug":self.slug,
+            "slug2": self.Cidade
+          
         })

@@ -185,10 +185,11 @@ def search(request):
     }
     return render(request, "search.html", context)
 
-def detail(request, slug):
+def detail(request, slug, *args, **kwargs):
     recipe = get_object_or_404(Local, slug=slug)
     context = {
         "recipe":recipe,
+        "cidade":recipe.Cidade,
     }
     return render(request, "detail.html", context)
 
