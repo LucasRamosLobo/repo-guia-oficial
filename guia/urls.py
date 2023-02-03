@@ -6,5 +6,5 @@ urlpatterns = [
     path("guia-sul-da-bahia/", sobre, name="sobre"),
     path("parceiro-guia-sul-da-bahia/", parceiro, name="parceiro"),
     path("<slug2>/<slug>", detail, name="detail"),
-    path("search/", search, name="search"),
+    path("Itacaré/", search, name="search"),
 ]
