@@ -12,6 +12,7 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 def home(request):
+    recipes = Local.objects.all()
     if request.method=="POST":
         wpp=request.POST['wpp']
         email=request.POST['email']
@@ -21,6 +22,7 @@ def home(request):
         return redirect('/')
     context = {
         "title":"home",
+        "recipes":recipes,
       
     }  
         
