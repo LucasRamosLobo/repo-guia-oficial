@@ -19,12 +19,6 @@ services:
       - "8080:8080"
     depends_on:
       - django_gunicorn
-  db:
-    image: postgres:12
-    environment:
-      POSTGRES_USER: mydatabaseuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
 
 volumes:
   static:
