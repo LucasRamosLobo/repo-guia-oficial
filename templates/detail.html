@@ -193,14 +193,17 @@
 						<div class="fh5co-text animate-box">
 							<h3>{{recipe.Nome}}</h3>
 							<p>{{recipe.SobreLocal}}</p>
-                            <ul class="fh5co-social" style="color:black">
-			
-					
-                                <li><a href="{{recipe.Instagram}}"><i class="icon-instagram"></i></a></li>
-                                <li><a href="{{recipe.Facebook}}"><i class="icon-facebook"></i></a></li>
-                                <li><a href="{{recipe.WhatsApp}}"><i class="icon-whatsapp"></i></a></li>
-                    
-                            </ul>
+							<ul class="fh5co-social" style="color:black">
+								{% if recipe.Instagram != "non-exist" %}
+									<li><a href="{{ recipe.Instagram }}"><i class="icon-instagram"></i></a></li>
+								{% endif %}
+								{% if recipe.Facebook != "non-exist" %}
+									<li><a href="{{ recipe.Facebook }}"><i class="icon-facebook"></i></a></li>
+								{% endif %}
+								{% if recipe.WhatsApp != "non-exist" %}
+									<li><a href="{{ recipe.WhatsApp }}"><i class="icon-whatsapp"></i></a></li>
+								{% endif %}
+							</ul>
 						</div>
 					</div>
 					
