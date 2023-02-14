@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd home/user/fix/repo-guia-oficial
+            cd home/user/fix2/repo-guia-oficial
             docker-compose stop
             docker-compose rm -f
             docker-compose pull
