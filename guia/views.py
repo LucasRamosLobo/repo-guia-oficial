@@ -7,9 +7,6 @@ from django.db.models import Q
 from django.urls import reverse_lazy
 
 
-
-
-
 # Create your views here.
 def home(request):
     recipes = Local.objects.all()
@@ -198,8 +195,9 @@ def search(request, *args, **kwargs):
 def detail(request, slug, *args, **kwargs):
     recipe = get_object_or_404(Local, slug=slug)
     context = {
-        "recipe":recipe,
-        "cidade":recipe.Cidade,
+        "recipe": recipe,
+        "cidade": recipe.Cidade,
+        "range": range,
     }
     return render(request, "detail.html", context)
 
