@@ -198,6 +198,7 @@ def detail(request, slug, *args, **kwargs):
         "recipe": recipe,
         "cidade": recipe.Cidade,
         "range": range,
+        "slug": "Itacare"
     }
     return render(request, "detail.html", context)
 
