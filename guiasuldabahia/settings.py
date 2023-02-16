@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'guiasuldabahia.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dados',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 

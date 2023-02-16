@@ -1,6 +1,14 @@
 version: '3.7'
    
 services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dados
+    ports:
+      - "3306:3306"
   django_gunicorn:
     container_name: webapp-frontend
     env_file:
@@ -11,6 +19,8 @@ services:
       context: .
     ports:
       - "8000:8000"
+    depends_on:
+      - db
   nginx:
     build: ./nginx
     volumes:
