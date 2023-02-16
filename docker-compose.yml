@@ -1,13 +1,6 @@
 version: '3.7'
    
 services:
-  db:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_USER: your_user
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_db
   django_gunicorn:
     container_name: webapp-frontend
     env_file:
@@ -18,8 +11,6 @@ services:
       context: .
     ports:
       - "8000:8000"
-    depends_on:
-      - db
   nginx:
     build: ./nginx
     volumes:
